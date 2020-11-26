@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AuthPicCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="130" height="143"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="130" height="143"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Ls-yh-h5Y">
+                        <rect key="frame" x="0.0" y="0.0" width="130" height="143"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kz-n8-kNF">
+                        <rect key="frame" x="113" y="5" width="12" height="12"/>
+                        <color key="backgroundColor" red="0.9882352941176471" green="0.23921568627450979" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="12" id="NxA-HO-frq"/>
+                            <constraint firstAttribute="height" constant="12" id="yJ6-OV-IMh"/>
+                        </constraints>
+                        <state key="normal" title="-"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="deleteBtnClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="0nh-IQ-s6x"/>
+                        </connections>
+                    </button>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wall_play.png" translatesAutoresizingMaskIntoConstraints="NO" id="7yw-m2-Qh2">
+                        <rect key="frame" x="45" y="51.5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="0mU-lu-YZK"/>
+                            <constraint firstAttribute="height" constant="40" id="frP-D5-8qn"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="7Kz-n8-kNF" secondAttribute="trailing" constant="5" id="Bq6-uM-0y6"/>
+                <constraint firstItem="7Kz-n8-kNF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="J4U-qb-kLB"/>
+                <constraint firstItem="7yw-m2-Qh2" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="M4Q-Ru-SvW"/>
+                <constraint firstItem="9Ls-yh-h5Y" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Zn3-Le-ibS"/>
+                <constraint firstItem="9Ls-yh-h5Y" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="bOM-pX-4sA"/>
+                <constraint firstItem="9Ls-yh-h5Y" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="hi5-i3-4kd"/>
+                <constraint firstItem="9Ls-yh-h5Y" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="kqc-fK-MYj"/>
+                <constraint firstItem="7yw-m2-Qh2" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="oiL-Qn-VPy"/>
+            </constraints>
+            <size key="customSize" width="130" height="143"/>
+            <connections>
+                <outlet property="deleteBtn" destination="7Kz-n8-kNF" id="NuZ-vg-UFS"/>
+                <outlet property="playImgV" destination="7yw-m2-Qh2" id="6Qz-9h-Yzz"/>
+                <outlet property="thumbImgV" destination="9Ls-yh-h5Y" id="8FT-1D-zHu"/>
+            </connections>
+            <point key="canvasLocation" x="99" y="99"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="wall_play.png" width="80" height="80"/>
+    </resources>
+</document>

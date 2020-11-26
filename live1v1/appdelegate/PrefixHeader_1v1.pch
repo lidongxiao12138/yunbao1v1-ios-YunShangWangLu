@@ -1,0 +1,157 @@
+//
+//  PrefixHeader_1v1.pch
+//  live1v1
+//
+//  Created by IOS1 on 2019/3/29.
+//  Copyright © 2019 IOS1. All rights reserved.
+//
+
+#ifndef PrefixHeader_1v1_pch
+#define PrefixHeader_1v1_pch
+
+#ifdef __OBJC__
+
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+MJ.h"
+#import "AFNetworking.h"
+#import "Masonry.h"
+#import "YBToolClass.h"
+#import <MJRefresh/MJRefresh.h>
+#import "YBBaseViewController.h"
+#import <IQKeyboardManager/IQKeyboardManager.h>
+#import "UIView+ITTAdditions.h"
+#import "UIView+LBExtension.h"
+#import "UIView+Additions.h"
+#import "UIView+WPFExtension.h"
+#import <ShareSDK/ShareSDK.h>
+#import "Config.h"
+#import "common.h"
+#import "YBWebViewController.h"
+#import "MXBADelegate.h"
+#import "cityDefault.h"
+#import "TZImagePickerController.h"
+#import "SDWebImageManager.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "THeader.h"
+#import "PublicView.h"
+#import "YBAlertView.h"
+
+#endif
+//域名
+
+//#define purl @"http://www.taodada.wang/appapi/"
+#define h5url @"http://www.taodada.wang/"
+
+#define purl @"http://mimi.nxm.wanheweb.com/appapi/"
+
+
+//三方
+//萌颜贴纸开关
+//#define isTXfiter 0
+//#define TIlicense @"f9b7b0e82f1a4160b29247c98c79d7b1"
+//QQ   ok
+#define QQAppKey @"e98baf7dd98a8946192773331fabf0ea"
+#define QQAppId @"101718738"
+//wechat  ok
+#define WechatAppId @"wxada0309fb6e79632"
+#define WechatAppSecret @"637bbb6cb332f8c6dcd48d19839ee8fb"
+//bugly   ok
+#define BuglyId @"9c5678d115"
+//腾讯IM   ok
+#define TXIMSdkAppid          1400229034
+#define TXIMSdkAccountType    @"36862"
+#define TXIMSdkBusiId   12742
+//短视频录制时长控制
+#define MAX_RECORD_TIME             15
+#define MIN_RECORD_TIME             5
+//腾讯收费版SDK licence、key  不需要
+#define LicenceURL @"http://license.vod2.myqcloud.com/license/v1/d2cf1c9c36f085621d406a3d78938c30/TXUgcSDK.licence"
+#define LicenceKey @"f9b7b0e82f1a4160b29247c98c79d7b1"
+
+#warning 每次新封包修改一下
+//协议名称 例如 现在demo中用到的有 (云豹充值协议 云豹平台协议 云豹私聊APP协议)
+#define protocolName @"爱欢"
+//#define LicenceURL @"http://license.vod2.myqcloud.com/license/v1/4f5531f46fbe3ca5353e1ae243f4cadb/TXUgcSDK.licence"
+//#define LicenceKey @"3739a6ae81da935f1473d5925b3160cd"
+
+//适配iphoneX
+#define iPhoneX (_window_width== 375.f && _window_height == 812.f)||(_window_width== 414.f && _window_height == 896.f)
+#define ShowDiff (iPhoneX ? 34: 0)
+#define statusbarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height-20)
+
+//获取手机系统版本
+#define SysVersion [[UIDevice currentDevice] systemVersion].floatValue
+
+
+//颜色16进制
+#define RGB_COLOR(_STR_,a) ([UIColor colorWithRed:[[NSString stringWithFormat:@"%lu", strtoul([[_STR_ substringWithRange:NSMakeRange(1, 2)] UTF8String], 0, 16)] intValue] / 255.0 green:[[NSString stringWithFormat:@"%lu", strtoul([[_STR_ substringWithRange:NSMakeRange(3, 2)] UTF8String], 0, 16)] intValue] / 255.0 blue:[[NSString stringWithFormat:@"%lu", strtoul([[_STR_ substringWithRange:NSMakeRange(5, 2)] UTF8String], 0, 16)] intValue] / 255.0 alpha:a])
+
+//app主色调s
+#define normalColors RGB_COLOR(@"#7014e2",1)
+
+//各种字体颜色
+#define color32 RGB_COLOR(@"#323232",1)
+#define color66 RGB_COLOR(@"#666666",1)
+#define colorCC RGB_COLOR(@"#cccccc",1)
+#define color96 RGB_COLOR(@"#969696",1)
+#define color99 RGB_COLOR(@"#999999",1)
+#define colorf5 RGB_COLOR(@"#f5f5f5",1)
+
+
+//后来添加
+#define GrayText [UIColor colorWithRed:150/255.f green:150/255.f blue:150/255.f alpha:1.f]
+#define Line_Cor [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1]
+#define Black_Cor RGB_COLOR(@"#f4f5f6",1)
+#define Pink_Cor normalColors
+
+
+// 随机色
+#define YBRandomColor [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1.0]
+
+//系统字体
+#define SYS_Font(a) [UIFont systemFontOfSize:(a)]
+#define fontMT(sizeThin)   [UIFont fontWithName:@"Arial-ItalicMT" size:(sizeThin)]
+#define AtCol RGB_COLOR(@"#f2e50b", 1)
+//@规则
+#define kATRegular @"@[\\u4e00-\\u9fa5\\w\\-\\_]+ "
+//emoji规则
+#define emojiPattern @"\\[\\w+\\]"
+
+//屏幕宽高
+#define  _window_width  [UIScreen mainScreen].bounds.size.width
+#define _window_height [UIScreen mainScreen].bounds.size.height
+
+#define EmojiHeight 200
+
+//各种手机5-6-6P
+#define SCREEN_MAX_LENGTH (MAX(_window_width, _window_height))
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+#define IS_IPHONE_X (IS_IPHONE && SCREEN_MAX_LENGTH > 736.0)
+
+//获取weak对象
+#define WeakSelf __weak typeof(self) weakSelf = self;
+
+//转字符串
+#define  minstr(a) [NSString stringWithFormat:@"%@",a]
+
+
+#define RECOEDTIME @"60s"
+
+//动态通知用
+#define PAUSEVIODEINDETAIL @"PAUSEVIODEINDETAIL"
+#define RESUMEVIODEINDETAIL @"RESUMEVIODEINDETAIL"
+#define REMOVEALLVIODEORVOICE @"REMOVEALLVIODEORVOICE"
+//去log
+#if 1
+#define NSLog(FORMAT, ...) fprintf(stderr,"[%s:%d行] %s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+
+#define NSLog(FORMAT, ...) nil
+
+#endif
+
+#endif /* PrefixHeader_1v1_pch */
